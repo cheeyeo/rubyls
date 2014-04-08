@@ -1,0 +1,27 @@
+foo   hello.sh  hello.txt
+
+apple.md  banana.md bar.txt   baz.txt   quux.txt
+
+foo/bar.txt foo/baz.txt foo/quux.txt
+
+total 16
+drwxr-xr-x  7 chee  staff  238  3 Apr 21:39 foo
+-rwxr-xr-x  1 chee  staff   39  3 Apr 21:39 hello.sh
+-rw-r--r--  1 chee  staff   13  3 Apr 21:39 hello.txt
+.   ..    .secret   foo   hello.sh  hello.txt
+
+total 24
+drwxr-xr-x  6 chee  staff  204  3 Apr 21:39 .
+drwxr-xr-x  5 chee  staff  170  8 Apr 20:23 ..
+-rw-r--r--  1 chee  staff    9  3 Apr 21:39 .secret
+drwxr-xr-x  7 chee  staff  238  3 Apr 21:39 foo
+-rwxr-xr-x  1 chee  staff   39  3 Apr 21:39 hello.sh
+-rw-r--r--  1 chee  staff   13  3 Apr 21:39 hello.txt
+-rw-r--r--  1 chee  staff   8  3 Apr 21:39 foo/bar.txt
+-rw-r--r--  1 chee  staff   8  3 Apr 21:39 foo/baz.txt
+-rw-r--r--  1 chee  staff  10  3 Apr 21:39 foo/quux.txt
+
+ls: missingdir: No such file or directory
+
+ls: illegal option -- Z
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]

@@ -1,4 +1,4 @@
-# Task: Implement the ruby-ls utility and get these tests to pass on a system 
+# Task: Implement the ruby-ls utility and get these tests to pass on a system
 # which has the UNIX ls command present.
 
 require "open3"
@@ -17,7 +17,10 @@ puts "Test 1: OK"
 
 ############################################################################
 
-abort "Next step: add a test for ruby-ls foo/*.txt"
+ls_output      = `ls foo/*.txt`
+ruby_ls_output = `ruby-ls foo/*.txt`
+
+abort "Failed 'ls foo/*.txt == ruby-ls foo/*.txt'" unless ls_output == ruby_ls_output
 
 puts "Test 2: OK"
 
