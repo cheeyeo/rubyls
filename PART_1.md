@@ -1,50 +1,11 @@
 ## Part 1: Standard I/O streams and the file system
 
-The article we'll work through in this part of the 
+The article we'll work through in this part of the
 course is [Building Unix-style command line
 applications](https://practicingruby.com/articles/building-unix-style-command-line-applications).
 Reading it carefully should prepare you to work through the following questions
 and exercises.
 
-## Questions
-
-> NOTE: Most of these questions can directly be answered by reading 
-> the article, but a few might require you to search the web for
-> answers. External research is not only OK, it's encouraged!
-
-* What steps are involved in making a Ruby scripts runnable as a 
-command line utility? (i.e. directly runnable like `rake` or `gem`
-rather than having to type `ruby my_script.rb`)
-
-* What is `ARGF` stream used for in Ruby?
-
-* What is `$?` used for in Bash/Ruby?
-
-* What does an exit status of zero indicate when a command line script 
-terminates? How about a non-zero exit status?
-
-* What is the difference between the `STDOUT` and `STDERR` output streams?
-
-* When executing shell commands from within a Ruby script, how can you capture
-what gets written to `STDOUT`? How do you go about capturing both `STDOUT` and
-`STDERR` streams?
-
-* How can you efficiently write the contents of an input file 
-to `STDOUT` with empty lines omitted? Being efficient in this context
-means avoiding storing the full contents of the input file in memory 
-and processing the stream in a single pass.
-
-* How would you go about parsing command line arguments that contain a mixture
-of flags and file arguments? (i.e. something like `ls -a -l foo/*.txt`)
-
-* What features are provided by Ruby's `String` class to help with fixed width
-text layouts? (i.e. right aligning a column of numbers, or left aligning a
-column of text with some whitespace after it to keep the total 
-column width uniform)
-
-* Suppose your script encounters an error and has to terminate itself. What is
-the idiomatic Unix-style way of reporting that the command did not run
-successfully?
 
 ## Exercises
 
@@ -56,7 +17,7 @@ exercises, you'll repeat a similar process to build a minimal clone of
 the `ls` command. By doing so, you'll explore many of Ruby's capabilities
 for working with files.
 
-**STEP 1:** Run the following bash commands in the `data` folder and copy the 
+**STEP 1:** Run the following bash commands in the `data` folder and copy the
 output into a text file for future reference.
 
 ```bash
@@ -82,7 +43,7 @@ Test 1: OK
 Next step: add a test for ruby-ls foo/*.txt
 ```
 
-**STEP 3:** Now replace the `ruby-ls` script with a Ruby-based implementation 
+**STEP 3:** Now replace the `ruby-ls` script with a Ruby-based implementation
 that passes the first test.
 
 To complete this step, you will probably need to take a closer look at how `ls` behaves
@@ -92,7 +53,7 @@ the latter case, with each entry being listed on its own line.
 
 To see how this works, run each of commands listed in STEP 1, but pipe the output
 to the cat utility, i.e. instead of typing `ls`, type `ls | cat`. It's
-this behavior you will need to clone to get your `ruby-ls` program 
+this behavior you will need to clone to get your `ruby-ls` program
 working correctly -- the screen output for human consumption is optional.
 
 **STEP 4:** Work your way through implementing some or all of the other use cases
